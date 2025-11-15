@@ -1,0 +1,132 @@
+/* Colores base */
+:root {
+    --crema: #f7f1e5;
+    --azul: #0d4d7a;
+    --verde: #008f7a;
+    --plomo: #e0e3e8;
+}
+
+/* Fondo general con mezcla de azul, verde, plomo y crema */
+body {
+    background: linear-gradient(135deg,
+            var(--azul) 0%,
+            var(--verde) 30%,
+            var(--plomo) 65%,
+            var(--crema) 100%);
+    background-attachment: fixed;
+}
+
+/* NAVBAR */
+
+.logo-nav {
+    height: 55px;
+    /* Altura ideal para navbars */
+    width: 140px;
+    /* Aumenta el ancho sin deformar */
+    object-fit: contain;
+    /* Mantiene la proporción del logo */
+}
+
+.navbar-crema {
+    background-color: var(--crema);
+}
+
+.navbar-crema .nav-link {
+    color: #333;
+    font-weight: 500;
+}
+
+.navbar-crema .nav-link:hover,
+.navbar-crema .nav-link.active {
+    color: var(--azul);
+}
+
+/* HERO */
+.hero-section {
+    min-height: 100vh;
+    padding-top: 80px;
+    /* espacio por la navbar fija */
+    padding-bottom: 60px;
+    position: relative;
+    color: #fff;
+    background-image: url("https://images.pexels.com/photos/6169660/pexels-photo-6169660.jpeg");
+    background-size: cover;
+    background-position: center;
+}
+
+.hero-section .overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(120deg,
+            rgba(0, 0, 0, 0.75),
+            rgba(0, 80, 120, 0.6));
+}
+
+#contactos iframe {
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.hero-section .container {
+    position: relative;
+    z-index: 1;
+}
+
+/* COTIZADOR CARD */
+.cotizador {
+    background-color: var(--crema);
+}
+
+/* SECCIONES */
+.seccion-fondo {
+    background-color: rgba(255, 255, 255, 0.9);
+}
+
+/* FOOTER */
+.footer-crema {
+    background-color: var(--crema);
+    color: #333;
+}
+
+/* BOTÓN FLOTANTE WHATSAPP */
+.whatsapp-float {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #25d366;
+    color: #fff;
+    font-size: 1.8rem;
+    width: 55px;
+    height: 55px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    z-index: 1000;
+}
+
+.whatsapp-float:hover {
+    background-color: #1ebe5b;
+    color: #fff;
+}
+
+/* Ajustes responsivos pequeños */
+@media (max-width: 576px) {
+    .hero-section {
+        text-align: center;
+    }
+
+    .destinos-list {
+        text-align: center;
+    }
+}
+
+.logo-nav {
+    height: 55px;
+    /* Altura ideal para navbars */
+    width: 140px;
+    /* Aumenta el ancho sin deformar */
+    object-fit: contain;
+    /* Mantiene la proporción del logo */
+}

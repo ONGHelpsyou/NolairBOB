@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>NOLAIR Bolivia | Transporte & Logística</title>
+
+    <!-- Bootstrap 5 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+
+    <!-- Estilos propios -->
+    <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+    <!-- NAVBAR -->
+    <nav class="navbar navbar-expand-lg navbar-light navbar-crema fixed-top shadow-sm">
+        <div class="container">
+
+            <!-- LOGO SIN TEXTO -->
+            <a class="navbar-brand" href="#inicio">
+                <img src="img/logo nl.png" alt="Logo" class="logo-nav">
+            </a>
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavbar"
+                aria-controls="mainNavbar" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="mainNavbar">
+                <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#inicio">Inicio</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="#nosotros">Nosotros</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contactos">Contactos</a>
+                    </li>
+
+                </ul>
+            </div>
+
+        </div>
+    </nav>
+
+    <!-- HERO / INICIO -->
+    <header id="inicio" class="hero-section d-flex align-items-center">
+        <div class="overlay"></div>
+        <div class="container position-relative">
+            <div class="row align-items-center">
+                <div class="col-lg-7 text-white mb-4 mb-lg-0">
+                    <h1 class="display-5 fw-bold">
+                        Transporte de carga y logística a todo el país
+                    </h1>
+                    <p class="lead">
+                        Se realiza envíos a todo el país, con recolección de encomiendas en la
+                        terminal de La Paz y distribución segura hacia destinos urbanos y
+                        poblaciones del norte paceño.
+                    </p>
+
+                    <h5 class="mt-4 mb-2">Envíos frecuentes a:</h5>
+                    <div class="destinos-list bg-dark bg-opacity-50 p-3 rounded-3">
+                        <span class="badge bg-light text-dark m-1">Apolo</span>
+                        <span class="badge bg-light text-dark m-1">Caranavi</span>
+                        <span class="badge bg-light text-dark m-1">Guanay</span>
+                        <span class="badge bg-light text-dark m-1">Guayaramerín</span>
+                        <span class="badge bg-light text-dark m-1">Ixiamas</span>
+                        <span class="badge bg-light text-dark m-1">Mapiri</span>
+                        <span class="badge bg-light text-dark m-1">Mayaya</span>
+                        <span class="badge bg-light text-dark m-1">Riberalta</span>
+                        <span class="badge bg-light text-dark m-1">Rurrenabaque</span>
+                        <span class="badge bg-light text-dark m-1">Sorata</span>
+                        <span class="badge bg-light text-dark m-1">Teoponte</span>
+                        <span class="badge bg-light text-dark m-1">Tipuani</span>
+                    </div>
+                </div>
+
+                <!-- FORMULARIO COTIZACIÓN -->
+                <div class="col-lg-5">
+                    <div class="card cotizador shadow-lg">
+                        <div class="card-body">
+                            <h4 class="card-title mb-3 text-center">Cotiza tu pedido</h4>
+                            <form id="cotizadorForm">
+                                <div class="mb-3">
+                                    <label for="origen" class="form-label">Origen</label>
+                                    <select id="origen" class="form-select" required>
+                                        <option value="">Selecciona origen</option>
+                                        <option value="La Paz">La Paz</option>
+                                        <option value="Santa Cruz">Santa Cruz</option>
+                                        <option value="Cochabamba">Cochabamba</option>
+                                        <option value="Oruro">Oruro</option>
+                                        <option value="Potosí">Potosí</option>
+                                        <option value="Sucre">Sucre</option>
+                                    </select>
+                                </div>
+
+                                <div class="mb-3">
+                                    <label for="destino" class="form-label">Destino</label>
+                                    <select id="destino" class="form-select" required>
+                                        <option value="">Selecciona destino</option>
+                                        <!-- Ciudades principales -->
+                                        <option value="La Paz">La Paz</option>
+                                        <option value="Santa Cruz">Santa Cruz</option>
+                                        <option value="Cochabamba">Cochabamba</option>
+                                        <option value="Oruro">Oruro</option>
+                                        <option value="Potosí">Potosí</option>
+                                        <option value="Sucre">Sucre</option>
+                                        <!-- Resto de destinos -->
+                                        <option value="Apolo">Apolo</option>
+                                        <option value="Caranavi">Caranavi</option>
+                                        <option value="Guanay">Guanay</option>
+                                        <option value="Guayaramerín">Guayaramerín</option>
+                                        <option value="Ixiamas">Ixiamas</option>
+                                        <option value="Mapiri">Mapiri</option>
+                                        <option value="Mayaya">Mayaya</option>
+                                        <option value="Riberalta">Riberalta</option>
+                                        <option value="Rurrenabaque">Rurrenabaque</option>
+                                        <option value="Sorata">Sorata</option>
+                                        <option value="Teoponte">Teoponte</option>
+                                        <option value="Tipuani">Tipuani</option>
+                                    </select>
+                                </div>
+
+                                <div class="mb-3">
+                                    <label for="peso" class="form-label">Peso (kg)</label>
+                                    <input type="number" class="form-control" id="peso" min="0.5" step="0.5"
+                                        placeholder="Ej. 10" required />
+                                    <div class="form-text">
+                                        Tarifa referencial: <strong>25 Bs por kilogramo</strong>.
+                                    </div>
+                                </div>
+
+                                <button type="submit" class="btn btn-primary w-100">
+                                    Calcular costo
+                                </button>
+                            </form>
+
+                            <div id="resultadoCotizacion" class="alert mt-3 d-none" role="alert"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- SECCIÓN NOSOTROS -->
+    <section id="nosotros" class="py-5 seccion-fondo">
+        <div class="container">
+            <div class="text-center mb-4">
+                <h2 class="fw-bold">Nosotros</h2>
+                <p class="text-muted">
+                    Servicios integrales de transporte de carga, logística y compras especializadas.
+                </p>
+            </div>
+
+            <div class="row g-4">
+                <div class="col-md-4">
+                    <div class="card h-100 shadow-sm">
+                        <div class="card-body">
+                            <h5 class="card-title">Transporte de carga</h5>
+                            <p class="card-text">
+                                Coordinamos transporte terrestre de carga liviana y pesada, con
+                                recolección desde terminales y puntos estratégicos de La Paz para
+                                llegar a destinos urbanos y poblaciones intermedias en todo el país.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-4">
+                    <div class="card h-100 shadow-sm">
+                        <div class="card-body">
+                            <h5 class="card-title">Logística y encomiendas</h5>
+                            <p class="card-text">
+                                Gestionamos la logística completa de tus envíos: almacenamiento,
+                                clasificación, seguimiento y entrega de encomiendas de forma segura y
+                                puntual, según las necesidades de cada cliente.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-4">
+                    <div class="card h-100 shadow-sm">
+                        <div class="card-body">
+                            <h5 class="card-title">Repuestos y compras especializadas</h5>
+                            <p class="card-text">
+                                Realizamos cotizaciones y compras de repuestos para maquinaria pesada
+                                y equipos industriales, además de encargos y pedidos especiales según
+                                solicitud del cliente.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Restricciones -->
+            <div class="row mt-5">
+                <div class="col-lg-8 mx-auto">
+                    <div class="card border-danger shadow-sm">
+                        <div class="card-header bg-danger text-white fw-bold d-flex align-items-center">
+                            <i class="bi bi-ban me-2"></i> Restricciones de envío
+                        </div>
+
+                        <div class="card-body">
+                            <ul class="mb-0">
+                                <li>
+                                    <i class="bi bi-x-octagon-fill text-danger me-2"></i>
+                                    Prohibido enviar sustancias controladas, estupefacientes o productos ilícitos.
+                                </li>
+
+                                <li>
+                                    <i class="bi bi-x-octagon-fill text-danger me-2"></i>
+                                    Prohibido enviar restos humanos o partes de restos humanos.
+                                </li>
+
+                                <li>
+                                    <i class="bi bi-x-octagon-fill text-danger me-2"></i>
+                                    Prohibido enviar insumos mineros regulados o de comercialización restringida.
+                                </li>
+
+                                <li>
+                                    <i class="bi bi-x-octagon-fill text-danger me-2"></i>
+                                    Prohibido enviar armas de fuego, municiones, explosivos o materiales inflamables.
+                                </li>
+
+                                <li>
+                                    <i class="bi bi-x-octagon-fill text-danger me-2"></i>
+                                    Prohibido enviar dinero en efectivo, joyas de alto valor sin seguro declarado y
+                                    documentos personales originales.
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+    </section>
+
+
+    <!-- SECCIÓN CONTACTOS -->
+    <section id="contactos" class="py-5 bg-light">
+        <div class="container">
+            <div class="text-center mb-4">
+                <h2 class="fw-bold">Contactos</h2>
+                <p class="text-muted">Estamos disponibles para coordinar tus envíos y consultas.</p>
+            </div>
+
+            <div class="row align-items-center">
+
+                <!-- 🗺️ MAPA -->
+                <div class="col-md-6 mb-4 mb-md-0">
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m16!1m12!1m3!1d382.27438502375645!2d-68.11605470712388!3d-16.468363717994503!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!2m1!1sterminal%20minasa!5e1!3m2!1ses!2sbo!4v1763272174063!5m2!1ses!2sbo"
+                        width="100%" height="280" style="border:0; border-radius:10px;" allowfullscreen=""
+                        loading="lazy">
+                    </iframe>
+                </div>
+
+                <!-- 📞 CONTACTOS -->
+                <div class="col-md-6">
+                    <div class="card shadow-sm">
+                        <div class="card-body">
+                            <h5 class="card-title mb-3 fw-bold">Datos de contacto</h5>
+
+                            <p class="mb-2">
+                                <strong><i class="bi bi-geo-alt-fill"></i> Dirección:</strong><br>
+                                Av. Ramiro Castillo, Puente Minasa
+                            </p>
+
+                            <p class="mb-2">
+                                <strong><i class="bi bi-phone-fill"></i> Celular:</strong> 69842149
+                            </p>
+
+                            <p class="mb-2">
+                                <strong><i class="bi bi-facebook"></i> Facebook:</strong> NolairlogBolivia
+                            </p>
+
+                            <p class="mb-3">
+                                <strong><i class="bi bi-envelope-fill"></i> Correo:</strong> nolairbolivia@gmail.com
+                            </p>
+
+                            <a href="https://wa.me/59169842149" target="_blank" class="btn btn-success w-100">
+                                <i class="bi bi-whatsapp"></i> Escribir por WhatsApp
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer-crema text-center py-3">
+        <div class="container">
+            <small>Derechos reservados 2025 &copy; NOLAIR Bolivia</small>
+        </div>
+    </footer>
+
+    <!-- BOTÓN FLOTANTE WHATSAPP -->
+    <a href="https://wa.me/59169842149" target="_blank" class="whatsapp-float" aria-label="WhatsApp NOLAIR Bolivia">
+        <i class="bi bi-whatsapp"></i>
+    </a>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Iconos Bootstrap para el logo de WhatsApp -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" />
+
+    <!-- JS propio -->
+    <script src="script.js"></script>
+</body>
+
+</html>
